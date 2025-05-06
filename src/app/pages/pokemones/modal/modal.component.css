@@ -1,0 +1,58 @@
+/* Personalización para la información del Pokémon */
+.info-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.modal-body .row {
+    margin-top: 1rem;
+}
+
+.modal-body .col-4 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+img {
+    max-height: 250px;
+    object-fit: contain;
+}
+
+h4 {
+    font-size: 1.25rem;
+    color: #495057;
+}
+
+.text-primary {
+    color: #007bff !important;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+
+/* Ajuste para hacer que el contenido sea más legible */
+ul.list-unstyled {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}

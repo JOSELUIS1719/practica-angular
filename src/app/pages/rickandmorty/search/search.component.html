@@ -1,0 +1,13 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+      <div class="col-md-6">
+          <div class="input-group">
+              <input type="text" class="form-control" #buscar (keydown.enter)="buscarPersonaje(buscar.value)"
+                  placeholder="Buscar personajes" aria-label="Buscar personajes">
+              <button class="btn btn-primary input-group-append" (click)="buscarPersonaje(buscar.value)" type="button">
+                  Buscar
+              </button>
+          </div>
+      </div>
+  </div>
+</div>

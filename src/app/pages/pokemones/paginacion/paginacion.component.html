@@ -1,0 +1,17 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <!-- Botón Previous, se desactiva si previust está vacío o nulo -->
+        <li class="page-item" [ngClass]="{'disabled': !previust}">
+            <a class="page-link" (click)="loadPokemon(previust)" *ngIf="previust">Previous</a>
+            <!-- Si no hay previous URL, muestra un texto estático -->
+            <span class="page-link" *ngIf="!previust">Previous</span>
+        </li>
+
+        <!-- Botón Next, se desactiva si nextUrl está vacío o nulo -->
+        <li class="page-item" [ngClass]="{'disabled': !nextUrl}">
+            <a class="page-link" (click)="loadPokemon(nextUrl)" *ngIf="nextUrl">Next</a>
+            <!-- Si no hay next URL, muestra un texto estático -->
+            <span class="page-link" *ngIf="!nextUrl">Next</span>
+        </li>
+    </ul>
+</nav>

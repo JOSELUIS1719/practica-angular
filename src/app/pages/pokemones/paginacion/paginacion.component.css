@@ -1,0 +1,43 @@
+/* Asegúrate de que el contenedor de la paginación esté centrado */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Estilo de los elementos de la paginación */
+.page-item {
+    margin: 0 5px; /* Espacio entre las páginas */
+}
+
+/* Estilo del enlace de la página */
+.page-link {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre los enlaces */
+.page-link:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+/* Deshabilitar la paginación anterior si no hay más elementos previos */
+.page-item.disabled .page-link {
+    background-color: #f1f1f1;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Estilo de los elementos activos, si es necesario */
+.page-item.active .page-link {
+    background-color: #28a745;
+    color: #fff;
+}

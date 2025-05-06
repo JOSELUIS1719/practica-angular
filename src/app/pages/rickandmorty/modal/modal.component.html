@@ -1,0 +1,26 @@
+<div class="modal fade show d-block custom-modal-bg" tabindex="-1" *ngIf="isVisible">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content custom-modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold">{{ character.name }}</h5>
+        <button type="button" class="btn-close" (click)="close()"></button>
+      </div>
+      <div class="modal-body">
+        <img [src]="character.image" class="img-fluid rounded shadow-sm mb-3" alt="{{ character.name }}">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Status:</strong> {{ character.status }}</li>
+          <li class="list-group-item"><strong>Species:</strong> {{ character.species }}</li>
+          <li class="list-group-item"><strong>Type:</strong> {{ character.type || 'N/A' }}</li>
+          <li class="list-group-item"><strong>Gender:</strong> {{ character.gender }}</li>
+          <li class="list-group-item"><strong>Origin:</strong> {{ character.origin.name }}</li>
+          <li class="list-group-item"><strong>Location:</strong> {{ character.location.name }}</li>
+          <li class="list-group-item"><strong>Episodes:</strong> {{ character.episode.length }} total</li>
+          <li class="list-group-item"><strong>Created:</strong> {{ character.created | date:'medium' }}</li>
+        </ul>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-outline-secondary" (click)="close()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

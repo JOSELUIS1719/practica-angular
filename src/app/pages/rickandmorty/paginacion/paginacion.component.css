@@ -1,0 +1,49 @@
+/* Contenedor de la paginación centrado */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Estilo de los botones de la paginación */
+.page-item {
+  margin: 0 5px;
+}
+
+/* Botones */
+.page-link {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover */
+.page-link:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+/* Deshabilitado */
+.page-item.disabled .page-link {
+  background-color: #f1f1f1;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Estilo activo si decides marcar la página actual */
+.page-item.active .page-link {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Si decides agregar un nav alrededor (no obligatorio en esta versión) */
+nav {
+  display: none;
+  background-color: rgba(255, 0, 0, 0.1);
+}

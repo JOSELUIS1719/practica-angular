@@ -1,0 +1,13 @@
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="input-group">
+                <input type="text" class="form-control" #buscar (keydown.enter)="bucarPokemon(buscar.value)"
+                    placeholder="Buscar Pokémon por nombre o ID" aria-label="Buscar Pokémon">
+                <button class="btn btn-primary input-group-append" (click)="bucarPokemon(buscar.value)" type="button">
+                    Buscar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

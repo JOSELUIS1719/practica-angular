@@ -1,0 +1,13 @@
+<div class="pagination">
+  <div class="page-item" [class.disabled]="paginaActual === 1">
+    <button class="page-link" (click)="paginaAnterior()" [disabled]="paginaActual === 1">
+      Anterior
+    </button>
+  </div>
+
+  <div class="page-item" [class.disabled]="paginaActual === totalPaginas">
+    <button class="page-link" (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas">
+      Siguiente
+    </button>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+/* Estilos para las tarjetas */
+.card {
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de Pokémon: centrado y tamaño ajustado */
+.pokemon-img {
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Espaciado en el cuerpo de la tarjeta */
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Botón más grande y centrado */
+button {
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Alertas de no Pokémon */
+.alert-warning {
+    background-color: #ffeb3b;
+    color: #212121;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+}
+
+

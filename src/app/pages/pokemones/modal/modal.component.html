@@ -1,0 +1,58 @@
+<div class="modal fade" #modalElement tabindex="-1" aria-labelledby="pokemonModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-4">{{pokemonAll.name}}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <!-- Imagen del Pokémon -->
+                    <img class="col-8 mx-auto rounded-3" src="{{pokemonAll.sprites.other?.['official-artwork']?.front_default}}" alt="Imagen de {{pokemonAll.name}}">
+                    
+                    <!-- Info Pokémon -->
+                    <div class="col-4">
+                        <p class="info-text">ID: <span class="fw-bold">{{pokemonAll.id}}</span></p>
+                        <p class="info-text">Altura: <span class="fw-bold">{{pokemonAll.height}}</span> m</p>
+                        <p class="info-text">Peso: <span class="fw-bold">{{pokemonAll.weight}}</span> kg</p>
+                        <p class="info-text">Experiencia: <span class="fw-bold">{{pokemonAll.base_experience}}</span></p>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <!-- Habilidades -->
+                    <div class="col-4">
+                        <h4 class="text-center text-primary">Habilidades:</h4>
+                        <ul class="list-unstyled">
+                            <li *ngFor="let ability of pokemonAll.abilities" class="fw-medium">
+                                {{ability.ability.name }}
+                                <small *ngIf="ability.is_hidden" class="text-muted">(Oculta)</small>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tipos -->
+                    <div class="col-4">
+                        <h4 class="text-center text-success">Tipos:</h4>
+                        <ul class="list-unstyled">
+                            <li *ngFor="let type of pokemonAll.types" class="fw-medium">
+                                {{type.type.name }}
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Estadísticas -->
+                    <div class="col-4">
+                        <h4 class="text-center text-warning">Estadísticas:</h4>
+                        <ul class="list-unstyled">
+                            <li *ngFor="let stat of pokemonAll.stats" class="fw-medium">
+                                {{stat.stat.name }}: <span class="fw-bold">{{stat.base_stat}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

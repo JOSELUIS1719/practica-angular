@@ -1,0 +1,38 @@
+<div class="container py-4">
+  <div class="row g-4 justify-content-center">
+    <div *ngFor="let character of characters" class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+      <div class="card animate__animated animate__fadeInUp w-100 h-100 shadow rounded-4 border-0">
+        <div class="position-relative p-3">
+          <img 
+            [src]="character.image" 
+            class="card-img-top mx-auto d-block img-fluid rounded-3" 
+            [alt]="character.name" 
+            style="height: 250px; object-fit: cover;"
+          >
+        </div>
+
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-bold text-primary">{{ character.name }}</h5>
+          <p class="card-text mb-1">
+            <strong>{{ character.status }} - {{ character.species }}</strong>
+          </p>
+          <p class="card-text mb-1 text-muted">
+            <strong>Last known location:</strong><br>{{ character.location.name }}
+          </p>
+          <p class="card-text mb-3 text-muted">
+            <strong>First seen in:</strong><br>{{ character.origin.name }}
+          </p>
+
+          <button 
+            class="btn btn-outline-primary rounded-pill mt-auto px-4"
+            (click)="openModal(character)"
+          >
+            Más Información
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-rickandmorty-modal #modal></app-rickandmorty-modal>

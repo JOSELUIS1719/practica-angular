@@ -1,0 +1,19 @@
+/* Personaliza el tamaño del modal */
+.custom-modal-bg .modal-dialog {
+  max-width: 500px; /* Ajusta el valor según el tamaño deseado */
+  width: 130%; /* Asegura que el modal ocupe el 100% de su contenedor hasta el max-width */
+}
+
+/* Personaliza el fondo del modal */
+.custom-modal-bg .modal-content {
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilos adicionales si deseas cambiar el color de fondo del modal */
+.custom-modal-bg .modal-header {
+  background-color: #f1f1f1;
+}
+
+.custom-modal-bg .modal-footer {
+  background-color: #f1f1f1;
+}

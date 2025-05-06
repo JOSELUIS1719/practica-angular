@@ -1,0 +1,26 @@
+<div class="row">
+    <ng-container *ngIf="pokemon && pokemon.results && pokemon.results.length > 0; else noPokemon">
+        <div class="card animate__bounce col-12 col-sm-6 col-md-4 col-lg-3 mx-auto mb-3" style="width: 300px"
+            *ngFor="let poke of pokemon?.results">
+            <img [src]="poke.data?.sprites?.versions?.['generation-v']?.['black-white']?.animated?.front_default"
+                class="card-img-top mx-auto d-block pokemon-img" alt="..." />
+
+            <div class="card-body">
+                <h5 class="card-title">Nombre: {{ poke.name }}</h5>
+                <p class="card-text">Experiencia: {{ poke.data?.base_experience }}</p>
+                <p>ID: {{ poke.data?.order }}</p>
+                <button class="btn btn-primary mx-auto d-block" (click)="openModal(poke.data!)">Más Información</button>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-template #noPokemon>
+        <div class="col-12">
+            <div class="alert alert-warning">
+                <p>No hay pokemons</p>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<app-modal></app-modal>

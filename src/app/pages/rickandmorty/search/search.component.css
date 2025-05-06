@@ -1,0 +1,33 @@
+.search-container {
+    display: flex;
+    margin: 20px 0;
+    max-width: 500px;
+  }
+  
+  input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #42b4ca;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  input:focus {
+    border-color: #2d8b9f;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #42b4ca;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #2d8b9f;
+  }

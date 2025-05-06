@@ -1,0 +1,20 @@
+<!-- Buscador -->
+<app-buscar (search)="onSearch($event)"></app-buscar>
+
+<!-- Paginación superior -->
+<app-paginacion 
+  [paginaActual]="currentPage" 
+  [totalPaginas]="totalPages" 
+  (newevent)="setRikand($event)">
+</app-paginacion>
+
+<!-- Tarjetas de personajes -->
+<app-rickandmorty-card [characters]="charactersAll"></app-rickandmorty-card>
+
+<!-- Paginación inferior -->
+<app-paginacion 
+  [paginaActual]="currentPage" 
+  [totalPaginas]="totalPages" 
+  (newevent)="setRikand($event)">
+</app-paginacion>
+
